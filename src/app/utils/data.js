@@ -1,0 +1,6 @@
+const getAllProducts = [
+    {
+        productName: "",
+        
+    }
+]
