@@ -3,8 +3,11 @@ import React from "react";
 const Navbar = () => {
   return (
     <section>
-      <div className="bg-dark p-lg-1">
-        <p className="">Signup up and get 20% off to your first order <span className=""></span></p>
+      <div className="bg-dark p-md-1">
+          <p className="m-0 text-light text-center">Signup up and get 20% off to your first order <span className="text-light text-decoration-underline">Sign Up Now</span></p>
+        {/* <div className="text-light">
+          X
+        </div> */}
       </div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
