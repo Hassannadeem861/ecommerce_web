@@ -1,4 +1,5 @@
 /* @import "tailwindcss"; */
+@import "./styles/font.css";
 
 :root {
   --primary: "gilroy-medium";
@@ -8,12 +9,12 @@
   --foreground: #171717;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,9 +24,114 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  /* margin: "0px";
-  padding: "0px"; */
+  font-family: var(--primary-regular);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.5px;
+}
+
+.level-1,
+.level-2,
+.level-3,
+.level-4,
+.level-5,
+.level-6,
+.level-8,
+.level-7,
+.level-2-lg,
+.level-5-lg,
+.sub-heading {
+  font-family: var(--heading-secondary-font);
+}
+
+.level-1 {
+  font-size: 150px !important;
+}
+
+.level-2-lg {
+  font-size: 75px !important;
+}
+
+.level-2 {
+  font-size: 64px !important;
+}
+
+.level-3 {
+  font-size: 48px !important;
+}
+
+.level-4 {
+  font-size: 40px !important;
+}
+
+.level-5-lg {
+  font-size: 32px !important;
+}
+
+.level-5 {
+  font-size: 28px !important;
+}
+
+.level-6 {
+  font-size: 23px !important;
+}
+
+.level-7,
+.sub-heading {
+  font-size: 20px !important;
+}
+
+.level-8 {
+  font-size: 16px !important;
+}
+
+.level-36 {
+  font-size: 36px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+figure {
+  margin-bottom: 0px;
+}
+
+.section {
+  padding: 6rem 0;
+  overflow-x: hidden;
+}
+
+.text-lg {
+  font-size: 21px;
+  font-family: var(--primary);
+  line-height: 1.25;
+  /* font-weight: 800; */
+}
+
+.text-xs {
+  font-size: 15px;
+  font-family: var(--primary);
+  /* font-weight: 400; */
+}
+
+.text-lg {
+  font-size: 19px !important;
+}
+
+.text {
+  font-size: 14px !important;
+}
+
+.text-xs {
+  font-size: 16px !important;
+}
+
+.text-xss {
+  font-size: 14px !important;
 }
