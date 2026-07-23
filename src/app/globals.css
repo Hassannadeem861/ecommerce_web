@@ -135,3 +135,34 @@ figure {
 .text-xss {
   font-size: 14px !important;
 }
+
+/* Tablet */
+@media (max-width: 991px) {
+  .level-1 { font-size: 90px !important; }
+  .level-2-lg { font-size: 56px !important; }
+  .level-2 { font-size: 44px !important; }
+  .level-3 { font-size: 34px !important; }
+  .level-4 { font-size: 30px !important; }
+  .level-5-lg { font-size: 26px !important; }
+  .level-5 { font-size: 22px !important; }
+  .level-6 { font-size: 20px !important; }
+  .level-7, .sub-heading { font-size: 18px !important; }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .level-1 { font-size: 52px !important; }
+  .level-2-lg { font-size: 40px !important; }
+  .level-2 { font-size: 32px !important; }
+  .level-3 { font-size: 26px !important; }
+  .level-4 { font-size: 22px !important; }
+  .level-5-lg { font-size: 20px !important; }
+  .level-5 { font-size: 18px !important; }
+  .level-6 { font-size: 17px !important; }
+  .level-7, .sub-heading { font-size: 16px !important; }
+  .level-8 { font-size: 14px !important; }
+
+  .text-lg { font-size: 16px !important; }
+  .text-xs { font-size: 14px !important; }
+  .text { font-size: 13px !important; }
+}

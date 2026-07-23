@@ -1,16 +1,15 @@
+import BrandLogosSection from "./components/BrandLogosSection/BrandLogosSection";
 import Banner from "./components/HeroSection/Banner";
+import Products from "./components/ProductsSection/Products";
 import HomeData from "./utils/data";
 export default function Home() {
-  const data = HomeData["home"];
-  console.log("data: ", data);
+  const data = HomeData;
+  // console.log("data: ", data);
   return (
     <>
-      <Banner
-        heading={data.heading}
-        description={data.description}
-        btnText={data.btnText}
-        image={data.image}
-      />
+      <Banner slides={HomeData.BannerData} />
+      <BrandLogosSection images={data.BrandLogosSection} />
+      <Products />
     </>
   );
 }
