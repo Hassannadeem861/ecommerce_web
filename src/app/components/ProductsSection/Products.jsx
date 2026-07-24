@@ -6,7 +6,7 @@ import Image from "next/image";
 
 
 const Products = ({ products, heading }) => {
-  console.log("products : ",products)
+  // console.log("products : ",products)
   const [visibleCount, setVisibleCount] = useState(4);
   // console.log("visibleCount :", visibleCount);
 
