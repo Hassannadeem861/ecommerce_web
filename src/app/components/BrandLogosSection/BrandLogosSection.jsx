@@ -11,7 +11,7 @@ import Image from "next/image";
 const BrandLogosSection = ({ images }) => {
   // Marquee animation ke liye images ko do baar repeat kiya — taake loop seamless (bina gap ke) dikhe
   const duplicatedImages = [...images, ...images];
-  console.log("duplicatedImages: ", duplicatedImages)
+  // console.log("duplicatedImages: ", duplicatedImages)
 
   return (
     <section

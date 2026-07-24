@@ -12,7 +12,7 @@ const Banner = ({ slides }) => {
     // Bootstrap JS load hone ka wait karo, phir manually carousel start karo
     import("bootstrap/dist/js/bootstrap.bundle.min.js").then((bootstrap) => {
       if (carouselRef.current) {
-        console.log("carouselRef: ", carouselRef.current);
+        // console.log("carouselRef: ", carouselRef.current);
 
         carouselInstance = new bootstrap.Carousel(carouselRef.current, {
           interval: 3000, // auto-slide har 4 second
