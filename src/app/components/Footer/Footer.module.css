@@ -1,0 +1,197 @@
+.footerWrap {
+  background-color: #f0f0f0;
+  padding-top: 50px;
+  position: relative;
+}
+
+/* ---------- Newsletter black banner ---------- */
+.newsletterBox {
+  background-color: #000000;
+  border-radius: 24px;
+  padding: 48px 56px;
+  margin-top: -80px;
+  margin-bottom: 64px;
+}
+
+.newsletterHeading {
+  line-height: 1.15;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emailInputWrap {
+  position: relative;
+  width: 100%;
+}
+
+.emailIcon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b6b6b;
+  pointer-events: none;
+}
+
+.emailInput {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px 14px 48px;
+  color: #171717;
+}
+
+.emailInput::placeholder {
+  color: #8c8c8c;
+}
+
+.emailInput:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.subscribeBtn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  opacity: 0.85;
+}
+
+/* ---------- Footer body ---------- */
+.footerBody {
+  padding-bottom: 40px;
+}
+
+.brandName {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brandDesc {
+  color: #6b6b6b;
+  max-width: 250px;
+  line-height: 1.5;
+}
+
+.socialRow {
+  margin-top: 20px;
+}
+
+.socialIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #171717;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #171717;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: #171717;
+  color: #ffffff;
+}
+
+.socialIconFilled {
+  background-color: #171717;
+  color: #ffffff;
+}
+
+.footerLink {
+  color: #6b6b6b;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footerLink:hover {
+  color: #171717;
+  text-decoration: underline;
+}
+
+/* ---------- Bottom bar ---------- */
+.bottomBar {
+  border-top: 1px solid #d6d6d6;
+  padding: 24px 0;
+}
+
+.copyright {
+  color: #6b6b6b;
+}
+
+.paymentRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.paymentBadge {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #171717;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+}
+
+.mcDots {
+  width: 14px;
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #eb001b 50%, #f79e1b 50%);
+  opacity: 0.9;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .newsletterBox {
+    padding: 36px;
+    border-radius: 20px;
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footerWrap {
+    padding-top: 60px;
+  }
+
+  .newsletterBox {
+    padding: 28px 24px;
+    border-radius: 16px;
+    margin-top: -40px;
+    margin-bottom: 48px;
+  }
+
+  .paymentRow {
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .newsletterBox {
+    margin-top: -24px;
+  }
+}
