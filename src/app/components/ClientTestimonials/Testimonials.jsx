@@ -42,7 +42,7 @@ const Testimonials = ({ heading, ClientTestimonialsData }) => {
     <section className="testimonial-section py-4">
       <div className="heading-wrapper">
       <div className="container">
-          <h2 className="text-center fw-bold m-0">{heading}</h2>
+          <h2 className="text-lg-center fw-bold m-0">{heading}</h2>
       </div>
         <div className="arrow-group">
           <button className="arrow-btn level-6" onClick={scrollPrev} aria-label="Previous">
