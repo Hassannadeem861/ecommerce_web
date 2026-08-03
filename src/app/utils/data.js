@@ -212,12 +212,88 @@ const HomeData = {
 
   ShopByStyle: {
     heading: <>BROWSE BY DRESS STYLE</>,
-    images:[
+    images: [
       "/assests/home/BrowseByDressStyle/Frame1.png",
       "/assests/home/BrowseByDressStyle/Frame2.png",
       "/assests/home/BrowseByDressStyle/Frame3.png",
       "/assests/home/BrowseByDressStyle/Frame4.png",
-    ]
+    ],
+  },
+
+  ClientTestimonials: {
+    heading: <> OUR HAPPY CUSTOMERS </>,
+    cards: [
+      {
+        name: "John J.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "Dow D.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "Alex K.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+      {
+        name: "James L.",
+        description:
+          "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+        starImage: "/assests/home/ClientTestimonials/stars.png",
+        image: "/assests/home/ClientTestimonials/greenTick.png",
+      },
+    ],
   },
 };
 

@@ -1,4 +1,5 @@
 import BrandLogosSection from "./components/BrandLogosSection/BrandLogosSection";
+import Testimonials from "./components/ClientTestimonials/Testimonials";
 import Banner from "./components/HeroSection/Banner";
 import Products from "./components/ProductsSection/Products";
 import ShopByStyle from "./components/ShopByStyle/ShopByStyle";
@@ -16,6 +17,7 @@ export default function Home() {
       <UnderLine />
       <Products heading={"TOP SELLERS"} products={data.TopSellerProducts} />
       <ShopByStyle heading={data.ShopByStyle.heading} images={data.ShopByStyle.images}/>
+      <Testimonials heading={data.ClientTestimonials.heading} ClientTestimonialsData={data.ClientTestimonials.cards} />
     </>
   );
 }

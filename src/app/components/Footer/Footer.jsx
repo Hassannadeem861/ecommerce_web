@@ -15,7 +15,7 @@ const resourceLinks = ["Free eBooks", "Development Tutorial", "How to - Blog", "
 
 const Footer = () => {
   return (
-    <footer className={styles.footerWrap}>
+    <footer className={`${styles.footerWrap}`}>
       <div className="container">
         {/* Newsletter banner - overlaps footer top */}
         <div className={`${styles.newsletterBox} row align-items-center gy-4 gy-lg-0`}>
@@ -64,18 +64,18 @@ const Footer = () => {
               women to men.
             </p>
             <div className={`d-flex gap-2 ${styles.socialRow}`}>
-              <a href="#" aria-label="Twitter" className={styles.socialIcon}>
+              {/* <a href="#" aria-label="Twitter" className={styles.socialIcon}>
                 <FaTwitter size={14} />
-              </a>
+              </a> */}
               <a href="#" aria-label="Facebook" className={`${styles.socialIcon} ${styles.socialIconFilled}`}>
                 <FaFacebookF size={14} />
               </a>
               <a href="#" aria-label="Instagram" className={styles.socialIcon}>
                 <FaInstagram size={14} />
               </a>
-              <a href="#" aria-label="Github" className={styles.socialIcon}>
+              {/* <a href="#" aria-label="Github" className={styles.socialIcon}>
                 <FaGithub size={14} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
               Shop.co © 2000-2023, All Rights Reserved
             </p>
           </div>
-          <div className="col-12 col-md-6">
+          {/* <div className="col-12 col-md-6">
             <div className={styles.paymentRow}>
               <span className={styles.paymentBadge}>VISA</span>
               <span className={styles.paymentBadge}>
@@ -105,7 +105,7 @@ const Footer = () => {
               </span>
               <span className={styles.paymentBadge}>G Pay</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

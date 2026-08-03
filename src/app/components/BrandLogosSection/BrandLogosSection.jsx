@@ -1,7 +1,3 @@
-//Agar images static hain (jaise brand logos, jo kabhi change nahi hongi) 
-// → in3 caching problem nahi honi chahiye, ye actually cache honi chahiye performance ke liye. Agar aap dev mode mein
-//  "purani image dikh rahi hai" wala issue face kar rahe ho (jab image file replace ki lekin browser purani dikha raha hai), to sirf Option 2 (timestamp query param) kaafi hai.
-//Agar images dynamic/user-uploaded hain (jo baar baar change hoti hain) → Option 1 (unoptimized) + Option 2 (timestamp) dono use karo.
 
 "use client";
 import colors from "@/app/utils/color";
