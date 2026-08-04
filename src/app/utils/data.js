@@ -45,16 +45,18 @@ const HomeData = {
   NewArrivalsProducts: [
     {
       id: 1,
+      slug: "t-shirt-with-tape-details",
       image: "/assests/home/NewArrivalsProducts/image1.png",
       title: "T-shirt with Tape Details",
-      rating: 4.5, // number rakho, taake stars dynamically calculate ho sakein (5 stars mein se filled kitne)
+      rating: 4.5,
       maxRating: 5,
       price: 120,
-      oldPrice: null, // discount nahi hai is product pe, isliye null
+      oldPrice: null,
       discountPercent: null,
     },
     {
       id: 2,
+      slug: "skinny-fit-jeans",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Skinny Fit Jeans",
       rating: 3.5,
@@ -65,6 +67,7 @@ const HomeData = {
     },
     {
       id: 3,
+      slug: "checkered-shirt",
       image: "/assests/home/NewArrivalsProducts/image3.png",
       title: "Checkered Shirt",
       rating: 4.5,
@@ -75,6 +78,7 @@ const HomeData = {
     },
     {
       id: 4,
+      slug: "sleeve-striped-t-shirt",
       image: "/assests/home/NewArrivalsProducts/image1.png",
       title: "Sleeve Striped T-shirt",
       rating: 4.5,
@@ -83,9 +87,9 @@ const HomeData = {
       oldPrice: 160,
       discountPercent: 30,
     },
-
     {
       id: 5,
+      slug: "oversized-graphic-tee",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Oversized Graphic Tee",
       rating: 4.6,
@@ -96,6 +100,7 @@ const HomeData = {
     },
     {
       id: 6,
+      slug: "vintage-denim-jacket",
       image: "/assests/home/NewArrivalsProducts/image3.png",
       title: "Vintage Denim Jacket",
       rating: 4.9,
@@ -106,6 +111,7 @@ const HomeData = {
     },
     {
       id: 7,
+      slug: "casual-linen-shirt",
       image: "/assests/home/NewArrivalsProducts/image4.png",
       title: "Casual Linen Shirt",
       rating: 4.5,
@@ -116,6 +122,7 @@ const HomeData = {
     },
     {
       id: 8,
+      slug: "athletic-jogger-pants",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Athletic Jogger Pants",
       rating: 4.7,
