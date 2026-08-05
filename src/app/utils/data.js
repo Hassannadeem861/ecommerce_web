@@ -46,6 +46,7 @@ const HomeData = {
     {
       id: 1,
       slug: "t-shirt-with-tape-details",
+      category: "t-shirts",
       description:
         "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
       image: "/assests/home/NewArrivalsProducts/image1.png",
@@ -61,6 +62,7 @@ const HomeData = {
     {
       id: 2,
       slug: "skinny-fit-jeans",
+      category: "jeans",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Skinny Fit Jeans",
       description:
@@ -76,6 +78,7 @@ const HomeData = {
     {
       id: 3,
       slug: "checkered-shirt",
+      category: "shirts",
       image: "/assests/home/NewArrivalsProducts/image3.png",
       title: "Checkered Shirt",
       description:
@@ -91,6 +94,7 @@ const HomeData = {
     {
       id: 4,
       slug: "sleeve-striped-t-shirt",
+      category: "t-shirts",
       image: "/assests/home/NewArrivalsProducts/image1.png",
       title: "Sleeve Striped T-shirt",
       description:
@@ -106,6 +110,7 @@ const HomeData = {
     {
       id: 5,
       slug: "oversized-graphic-tee",
+      category: "t-shirts",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Oversized Graphic Tee",
       description:
@@ -121,6 +126,7 @@ const HomeData = {
     {
       id: 6,
       slug: "vintage-denim-jacket",
+      category: "jackets",
       image: "/assests/home/NewArrivalsProducts/image3.png",
       title: "Vintage Denim Jacket",
       description:
@@ -136,6 +142,7 @@ const HomeData = {
     {
       id: 7,
       slug: "casual-linen-shirt",
+      category: "shirts",
       image: "/assests/home/NewArrivalsProducts/image4.png",
       title: "Casual Linen Shirt",
       description:
@@ -151,6 +158,7 @@ const HomeData = {
     {
       id: 8,
       slug: "athletic-jogger-pants",
+      category: "pants",
       image: "/assests/home/NewArrivalsProducts/image2.png",
       title: "Athletic Jogger Pants",
       description:

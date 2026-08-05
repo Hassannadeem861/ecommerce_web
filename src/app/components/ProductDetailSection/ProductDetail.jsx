@@ -149,7 +149,7 @@ const ProductDetail = ({ product }) => {
             </div>
 
             {/* Price - Responsive */}
-            <div className="d-flex gap-2 gap-md-3 mt-2 mt-md-3 flex-wrap">
+            <div className="d-flex align-items-center gap-2 gap-md-3 mt-2 mt-md-3 flex-wrap">
               <span className="fw-bold" style={{ fontSize: "clamp(18px, 2.5vw, 24px)" }}>
                 ${product.price}
               </span>

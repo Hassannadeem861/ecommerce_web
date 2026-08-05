@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <section>
       {/* Promo bar */}
-      <div className="bg-dark p-2 position-relative text-center">
+      {/* <div className="bg-dark p-2 position-relative text-center">
         <p className="m-0 text-light small px-4">
           Sign up and get 20% off to your first order{" "}
           <span
@@ -15,11 +15,11 @@ const Navbar = () => {
             Sign Up Now
           </span>
         </p>
-        {/* <button
+        <button
           className="btn-close btn-close-white position-absolute top-50 end-0 translate-middle-y me-3"
           aria-label="Close"
-        ></button> */}
-      </div>
+        ></button>
+      </div> */}
 
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg py-3">

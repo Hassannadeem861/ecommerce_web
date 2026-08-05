@@ -37,7 +37,7 @@ const Products = ({ products, heading }) => {
             return (
               <div key={data.id} className="col-6 col-md-4 col-lg-3">
                 {/* ---- Image Box ---- */}
-                <Link href={`/product/${data.slug}`}>
+                <Link href={`/product/${data.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                   <div
                     style={{
                       position: "relative",
@@ -65,7 +65,7 @@ const Products = ({ products, heading }) => {
                   </h6>
 
                   {/* ---- Stars + Rating ---- */}
-                  <div className="d-flex align-items-center gap-1 mb-1">
+                  <div className="d-flex align-items-center gap-1 mb-1" style={{listStyle:"none"}}>
                     {/* Full stars — jitne poore stars hain utne yellow star render karo */}
                     {Array.from({ length: fullStars }).map((_, i) => (
                       <span key={`full-${i}`} style={{ color: "#FFC633" }}>
