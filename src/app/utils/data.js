@@ -56,7 +56,7 @@ const HomeData = {
       oldPrice: 300,
       discountPercent: 40,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 2,
@@ -71,7 +71,7 @@ const HomeData = {
       oldPrice: 260,
       discountPercent: 20,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 3,
@@ -86,7 +86,7 @@ const HomeData = {
       oldPrice: null,
       discountPercent: null,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 4,
@@ -101,7 +101,7 @@ const HomeData = {
       oldPrice: 160,
       discountPercent: 30,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 5,
@@ -116,7 +116,7 @@ const HomeData = {
       oldPrice: 120,
       discountPercent: 21,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 6,
@@ -131,7 +131,7 @@ const HomeData = {
       oldPrice: 340,
       discountPercent: 18,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 7,
@@ -146,7 +146,7 @@ const HomeData = {
       oldPrice: null,
       discountPercent: null,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
     {
       id: 8,
@@ -161,7 +161,7 @@ const HomeData = {
       oldPrice: 230,
       discountPercent: 20,
       sizes: ["Small", "Medium", "Large", "X-Large"],
-      colorOptions: ["#F2F0F1","#4A3F35", "#1F5C4E", "#2A2A5C"],
+      colorOptions: ["#4A3F35", "#1F5C4E", "#2A2A5C"],
     },
   ],
 
