@@ -17,14 +17,14 @@ const RelatedProducts = ({heading, product, slug }) => {
   return (
     <section className="mt-4 mt-md-5 mb-md-5">
       <h2
-        className="level-2 fw-bold text-center"
+        className="level-sm-8 level-md-1 fw-bold text-center"
         style={{ color: colors.black }}
       >
         {heading}
       </h2>
 
       <div className="">
-        <div className="row g-4 mt-3 mt-md-4 justify-content-center">
+        <div className="row g-4 mt-1 mt-md-4 justify-content-center">
           {relatedProducts.map((data) => {
             // rating ko full aur half stars mein todna — jaise 4.5 ka matlab 4 poore stars + 1 aadha star
             const fullStars = Math.floor(data.rating);
