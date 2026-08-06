@@ -15,7 +15,7 @@ export default function Home() {
       <BrandLogosSection images={data.BrandLogosSection} />
       <Products heading={"NEW ARRIVALS"} products={data.NewArrivalsProducts} />
       <UnderLine />
-      <Products heading={"TOP SELLERS"} products={data.TopSellerProducts} />
+      {/* <Products heading={"TOP SELLERS"} products={data.TopSellerProducts} /> */}
       <ShopByStyle heading={data.ShopByStyle.heading} images={data.ShopByStyle.images}/>
       <Testimonials heading={data.ClientTestimonials.heading} ClientTestimonialsData={data.ClientTestimonials.cards} />
     </>

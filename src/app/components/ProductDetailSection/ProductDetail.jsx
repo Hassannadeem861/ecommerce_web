@@ -3,7 +3,7 @@ import colors from "@/app/utils/color";
 import React, { useState } from "react";
 import Image from "next/image";
 
-const ProductDetail = ({ product }) => {
+const ProductDetailInfo = ({ product }) => {
   let fullStars = Math.floor(product.rating);
   let hasHalfStar = product.rating % 1 !== 0;
   let emptyStars = product.maxRating - fullStars - (hasHalfStar ? 1 : 0);
@@ -278,4 +278,4 @@ const ProductDetail = ({ product }) => {
   );
 };
 
-export default ProductDetail;
+export default ProductDetailInfo;

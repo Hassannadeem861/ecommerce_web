@@ -9,10 +9,8 @@ const RelatedProducts = ({heading, product, slug }) => {
   const FindcurrentProduct = product.find((product) => product.slug === slug);
   
   const relatedProducts = product.filter(
-      (item) =>
-        item.category === FindcurrentProduct.category &&
-      item.id !== FindcurrentProduct.id,
-    ).slice(0, 4);
+      (item) => item.category === FindcurrentProduct.category && item.id !== FindcurrentProduct.id,
+  ).slice(0, 4);
 
   return (
     <section className="mt-4 mt-md-5 mb-md-5">
@@ -24,7 +22,7 @@ const RelatedProducts = ({heading, product, slug }) => {
       </h2>
 
       <div className="">
-        <div className="row g-4 mt-1 mt-md-4 justify-content-center">
+        <div className="row g-4 mt-1 mt-md-1 justify-content-center">
           {relatedProducts.map((data) => {
             // rating ko full aur half stars mein todna — jaise 4.5 ka matlab 4 poore stars + 1 aadha star
             const fullStars = Math.floor(data.rating);

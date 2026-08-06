@@ -342,6 +342,108 @@ const HomeData = {
       },
     ],
   },
+
+  ClientReviews: [
+    {
+      id: 1,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      verifiedIconImage: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: true
+    },
+    {
+      id: 2,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      image: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: true
+    },
+    {
+      id: 3,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      image: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: true
+    },
+    {
+      id: 4,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      image: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: true
+    },
+    {
+      id: 5,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      image: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: false
+    },
+    {
+      id: 6,
+      rating: 4.5,
+      maxRating: 5,
+      name: "Samantha D.",
+      image: "/assests/home/ClientTestimonials/greenTick.png",
+      description: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+      postedDate: "August 14, 2026",
+      verified: false
+    }
+  ],
+
+  FAQs: [
+    {
+      id: 1,
+      question: "What sizes are available for this product?",
+      answer:
+        "This product is available in Small, Medium, Large, and X-Large. You can check the size chart on the product page to find your perfect fit before ordering.",
+    },
+    {
+      id: 2,
+      question: "How do I know which size to order?",
+      answer:
+        "We recommend checking our detailed size guide, which compares your body measurements with each size. If you're between sizes, we suggest sizing up for a more comfortable fit.",
+    },
+    {
+      id: 3,
+      question: "What is your return and exchange policy?",
+      answer:
+        "We offer a 30-day return and exchange policy on all unworn items with original tags attached. Simply visit our returns page to initiate the process.",
+    },
+    {
+      id: 4,
+      question: "How long does shipping usually take?",
+      answer:
+        "Standard shipping typically takes 3-5 business days, while express shipping takes 1-2 business days. Delivery times may vary depending on your location.",
+    },
+    {
+      id: 5,
+      question: "Is this product true to size?",
+      answer:
+        "Yes, this product generally fits true to size. However, fabric type and cut can slightly affect fit, so we recommend reviewing customer reviews and the size chart for extra confidence.",
+    },
+    {
+      id: 6,
+      question: "How should I wash and care for this item?",
+      answer:
+        "We recommend machine washing in cold water with similar colors, and avoiding bleach. Tumble dry on low heat or hang to air dry for best results.",
+    },
+  ],
 };
 
 export default HomeData;

@@ -1,18 +1,20 @@
-import ProductDetail from "@/app/components/ProductDetailSection/ProductDetail.jsx";
+import ProductDetailInfo  from "@/app/components/ProductDetailSection/ProductDetail.jsx";
 import HomeData from "../../../utils/data.js";
 import RelatedProducts from "@/app/components/RelatedProducts/RelatedProducts.jsx";
+import ProductTabs from "@/app/components/ProductTabs/ProductTabs.jsx";
 
 const ProductPage = async ({ params }) => {
   const { slug } = await params;
 //   console.log("slug: ", slug);
-
+ const data = HomeData;
   const product = HomeData?.NewArrivalsProducts.find(
     (item) => item.slug === slug,
   );
 
   return (
     <div className="container">
-      <ProductDetail product={product} />
+      <ProductDetailInfo  product={product} />
+      <ProductTabs clientReviews={data.ClientReviews} faqs={data.FAQs}/>
       <RelatedProducts heading={"YOU MIGHT ALSO LIKE"} product={HomeData?.NewArrivalsProducts} slug={slug}/>
     </div>
   );
