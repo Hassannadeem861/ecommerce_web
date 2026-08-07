@@ -4,24 +4,20 @@ import HomeData from "@/app/utils/data";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import toast from "react-hot-toast";
-import ReviewModal from "../ReviewModal/ReviewModal.jsx"; // apna sahi path daal lena
+import ReviewModal from "../ReviewModal/ReviewModal.jsx";
 
 const ClientReviews = ({ clientReviews }) => {
-  // ✅ Static data ko state mai daala taake add/edit/delete kar sakein
   const [reviews, setReviews] = useState(HomeData.ClientTestimonials.cards);
 
   const dropDownOptions = ["Latest", "Old"];
   const [selectedSort, setSelectedSort] = useState("Latest");
 
-  // Modal control
   const [showModal, setShowModal] = useState(false);
-  const [editingReview, setEditingReview] = useState(null); // null = add mode
+  const [editingReview, setEditingReview] = useState(null);
 
-  // "..." dropdown control (sirf ek dafa mai ek hi khula rahega)
   const [openMenuId, setOpenMenuId] = useState(null);
   const menuRef = useRef(null);
 
-  // Bahar click karne par "..." menu band ho jaye
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -36,17 +32,15 @@ const ClientReviews = ({ clientReviews }) => {
     setOpenMenuId((prev) => (prev === id ? null : id));
   };
 
-  // "Write a Review" button click → add mode
   const handleOpenAddModal = () => {
     setEditingReview(null);
     setShowModal(true);
   };
 
-  // "Update" click → edit mode
   const handleOpenEditModal = (review) => {
     setEditingReview(review);
     setShowModal(true);
-    setOpenMenuId(null); // menu band karo
+    setOpenMenuId(null);
   };
 
   const handleCloseModal = () => {
@@ -54,10 +48,8 @@ const ClientReviews = ({ clientReviews }) => {
     setEditingReview(null);
   };
 
-  // Form submit → add ya update
   const handleSubmitReview = (formData) => {
     if (editingReview) {
-      // ✏️ UPDATE
       setReviews((prev) =>
         prev.map((r) =>
           r.id === editingReview.id ? { ...r, ...formData } : r
@@ -65,7 +57,6 @@ const ClientReviews = ({ clientReviews }) => {
       );
       toast.success("Review updated successfully!");
     } else {
-      // ➕ ADD
       const newReview = {
         id: Date.now(),
         ...formData,
@@ -76,7 +67,7 @@ const ClientReviews = ({ clientReviews }) => {
           month: "short",
           year: "numeric",
         }),
-        isOwn: true, // ✅ isi se "..." menu dikhega
+        isOwn: true,
       };
       setReviews((prev) => [newReview, ...prev]);
       toast.success("Review submitted successfully!");
@@ -84,7 +75,6 @@ const ClientReviews = ({ clientReviews }) => {
     handleCloseModal();
   };
 
-  // Delete
   const handleDeleteReview = (id) => {
     setReviews((prev) => prev.filter((r) => r.id !== id));
     toast.success("Review deleted");
@@ -150,7 +140,7 @@ const ClientReviews = ({ clientReviews }) => {
       </div>
 
       <div className="mt-md-5 mt-3">
-        <div className="d-flex justify-content-center flex-wrap gap-3">
+        <div className="d-flex flex-wrap gap-3 reviews-grid">
           {reviews.map((data, index) => {
             const cardId = data.id || index;
             const isMenuOpen = openMenuId === cardId;
@@ -161,133 +151,127 @@ const ClientReviews = ({ clientReviews }) => {
               (data.maxRating || 5) - fullStars - (hasHalfStar ? 1 : 0);
 
             return (
-              <div key={cardId}>
-                <div
-                  className="testimonial-card p-4"
-                  style={{
-                    border: `2px solid ${colors.bannerbackgroundColor}`,
-                    borderRadius: 15,
-                    position: "relative", // dropdown positioning ke liye zaroori
-                  }}
-                >
-                  {/* Stars + "..." menu */}
-                  <div className="d-flex justify-content-between align-items-center gap-1 mb-1 flex-wrap">
-                    <div>
-                      {Array.from({ length: fullStars }).map((_, i) => (
-                        <span
-                          key={`full-${i}`}
-                          style={{
-                            color: "#FFC633",
-                            fontSize: "clamp(20px, 4vw, 32px)",
-                            lineHeight: 1,
-                          }}
-                        >
-                          ★
-                        </span>
-                      ))}
-
-                      {hasHalfStar && (
-                        <span
-                          style={{
-                            position: "relative",
-                            display: "inline-block",
-                            fontSize: "clamp(20px, 4vw, 32px)",
-                            lineHeight: 1,
-                          }}
-                        >
-                          <span style={{ color: "#E0E0E0" }}>★</span>
-                          <span
-                            style={{
-                              position: "absolute",
-                              left: 0,
-                              top: 0,
-                              width: "50%",
-                              overflow: "hidden",
-                              color: "#FFC633",
-                            }}
-                          >
-                            ★
-                          </span>
-                        </span>
-                      )}
-
-                      {Array.from({ length: emptyStars }).map((_, i) => (
-                        <span
-                          key={`empty-${i}`}
-                          style={{
-                            color: "#E0E0E0",
-                            fontSize: "clamp(20px, 4vw, 32px)",
-                            lineHeight: 1,
-                          }}
-                        >
-                          ★
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* ✅ Sirf apni (user-added) review pe "..." dikhega */}
-                    {data.isOwn && (
-                      <div
-                        className="options-wrapper"
-                        ref={isMenuOpen ? menuRef : null}
+              <div
+                key={cardId}
+                className="testimonial-card p-4"
+                style={{
+                  border: `2px solid ${colors.bannerbackgroundColor}`,
+                  borderRadius: 15,
+                  position: "relative",
+                  boxSizing: "border-box",
+                }}
+              >
+                {/* Stars + "..." menu */}
+                <div className="d-flex justify-content-between align-items-center gap-1 mb-1 flex-wrap">
+                  <div>
+                    {Array.from({ length: fullStars }).map((_, i) => (
+                      <span
+                        key={`full-${i}`}
+                        style={{
+                          color: "#FFC633",
+                          fontSize: "clamp(20px, 4vw, 32px)",
+                          lineHeight: 1,
+                        }}
                       >
-                        <button
-                          type="button"
-                          className="options-btn"
-                          onClick={() => toggleMenu(cardId)}
-                          aria-label="Options"
+                        ★
+                      </span>
+                    ))}
+
+                    {hasHalfStar && (
+                      <span
+                        style={{
+                          position: "relative",
+                          display: "inline-block",
+                          fontSize: "clamp(20px, 4vw, 32px)",
+                          lineHeight: 1,
+                        }}
+                      >
+                        <span style={{ color: "#E0E0E0" }}>★</span>
+                        <span
+                          style={{
+                            position: "absolute",
+                            left: 0,
+                            top: 0,
+                            width: "50%",
+                            overflow: "hidden",
+                            color: "#FFC633",
+                          }}
                         >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            className="bi bi-three-dots"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                          </svg>
-                        </button>
-
-                        {isMenuOpen && (
-                          <div className="options-menu">
-                            <button
-                              type="button"
-                              className="options-menu-item"
-                              onClick={() => handleOpenEditModal(data)}
-                            >
-                              Update
-                            </button>
-                            <button
-                              type="button"
-                              className="options-menu-item text-danger"
-                              onClick={() => handleDeleteReview(data.id)}
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        )}
-                      </div>
+                          ★
+                        </span>
+                      </span>
                     )}
+
+                    {Array.from({ length: emptyStars }).map((_, i) => (
+                      <span
+                        key={`empty-${i}`}
+                        style={{
+                          color: "#E0E0E0",
+                          fontSize: "clamp(20px, 4vw, 32px)",
+                          lineHeight: 1,
+                        }}
+                      >
+                        ★
+                      </span>
+                    ))}
                   </div>
 
-                  <div className="d-flex align-items-center gap-2 mt-2">
-                    <span className="level-8 fw-bold">{data.name}</span>
-                    <Image
-                      width={16}
-                      height={16}
-                      src={data.image}
-                      alt="verified"
-                    />
-                  </div>
+                  {data.isOwn && (
+                    <div
+                      className="options-wrapper"
+                      ref={isMenuOpen ? menuRef : null}
+                    >
+                      <button
+                        type="button"
+                        className="options-btn"
+                        onClick={() => toggleMenu(cardId)}
+                        aria-label="Options"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-three-dots"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                        </svg>
+                      </button>
 
-                  <div className="mt-2" style={{ color: "#666666" }}>
-                    {data.description}
-                  </div>
+                      {isMenuOpen && (
+                        <div className="options-menu">
+                          <button
+                            type="button"
+                            className="options-menu-item"
+                            onClick={() => handleOpenEditModal(data)}
+                          >
+                            Update
+                          </button>
+                          <button
+                            type="button"
+                            className="options-menu-item text-danger"
+                            onClick={() => handleDeleteReview(data.id)}
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
 
-                  <div className="mt-2" style={{ color: "#666666" }}>
-                    (Posted on {data.postedDate})
-                  </div>
+                <div className="d-flex align-items-center gap-2 mt-2">
+                  <span className="level-8 fw-bold">{data.name}</span>
+                  <Image width={16} height={16} src={data.image} alt="verified" />
+                </div>
+
+                <div className="mt-2" style={{ color: "#666666" }}>
+                  {data.description}
+                </div>
+
+                <div className="mt-2" style={{ color: "#666666" }}>
+                  (Posted on {data.postedDate})
                 </div>
               </div>
             );
@@ -295,7 +279,6 @@ const ClientReviews = ({ clientReviews }) => {
         </div>
       </div>
 
-      {/* Add/Edit Modal */}
       <ReviewModal
         show={showModal}
         onClose={handleCloseModal}
@@ -304,10 +287,17 @@ const ClientReviews = ({ clientReviews }) => {
       />
 
       <style jsx>{`
-        .testimonial-card {
+        /* Parent container ko full width diya taake uske andar "100%" ka matlab clear ho */
+        .reviews-grid {
           width: 100%;
-          height: 100%;
         }
+
+        .testimonial-card {
+          box-sizing: border-box;
+          flex: 1 1 100%; /* mobile: poori row le, content-size ignore karke */
+          width: 100%;
+        }
+
         .options-wrapper {
           position: relative;
         }
@@ -348,19 +338,26 @@ const ClientReviews = ({ clientReviews }) => {
         .options-menu-item:hover {
           background: #f8f8f8;
         }
+
+        /* Tablet: 2 cards per row */
         @media (min-width: 768px) {
           .testimonial-card {
-            width: 320px;
+            flex: 1 1 calc(50% - 12px); /* 2 columns, gap-3 (~12px ka half) minus karke */
+            width: auto;
           }
         }
+
+        /* Desktop: 3 cards per row */
         @media (min-width: 992px) {
           .testimonial-card {
-            width: 360px;
+            flex: 1 1 calc(50% - 16px) !important; /* 33.333% se 50% kar diya */
           }
         }
+
+        /* Large desktop: fixed wide cards */
         @media (min-width: 1200px) {
           .testimonial-card {
-            width: 640px;
+            flex: 0 0 360px;
           }
         }
       `}</style>
