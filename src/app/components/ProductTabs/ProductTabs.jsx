@@ -19,7 +19,7 @@ const ProductTabs = ({product, clientReviews, faqs }) => {
   ];
 
   return (
-    <section className="mt-1 mt-md-5">
+    <section className="mt-4 mt-md-5">
       <div
         className="d-flex justify-content-center gap-5"
         style={{ borderBottom: `1px solid ${colors.textColor}` }}>

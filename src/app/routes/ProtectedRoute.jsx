@@ -11,7 +11,6 @@ const ProtectedRoute = ({ children, allowedRoles = [] }) => {
     check_auth_status,
     user_role
   } = useSelector((state) => state.auth);
-  // console.log("Protected role check: ", user_role)
   const location = useLocation();
 
   if (check_auth_status === asyncStatus.LOADING) {

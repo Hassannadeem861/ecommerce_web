@@ -18,7 +18,7 @@ const Testimonials = ({ heading, ClientTestimonialsData }) => {
         stopOnInteraction: false,
         stopOnMouseEnter: true,
       }),
-    ]
+    ],
   );
 
   // ---- Arrow click: AutoScroll ko pehle stop karo, navigate karo, phir resume karo ----
@@ -41,14 +41,22 @@ const Testimonials = ({ heading, ClientTestimonialsData }) => {
   return (
     <section className="testimonial-section py-4">
       <div className="heading-wrapper">
-      <div className="container">
+        <div className="container">
           <h2 className="text-lg-center fw-bold m-0">{heading}</h2>
-      </div>
+        </div>
         <div className="arrow-group">
-          <button className="arrow-btn level-6" onClick={scrollPrev} aria-label="Previous">
+          <button
+            className="arrow-btn level-6"
+            onClick={scrollPrev}
+            aria-label="Previous"
+          >
             ←
           </button>
-          <button className="arrow-btn level-6" onClick={scrollNext} aria-label="Next">
+          <button
+            className="arrow-btn level-6"
+            onClick={scrollNext}
+            aria-label="Next"
+          >
             →
           </button>
         </div>
@@ -56,36 +64,106 @@ const Testimonials = ({ heading, ClientTestimonialsData }) => {
 
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
-          {ClientTestimonialsData.map((data, index) => (
-            <div className="embla__slide" key={index}>
-              <div
-                className="testimonial-card p-4"
-                style={{
-                  border: `2px solid ${colors.bannerbackgroundColor}`,
-                  borderRadius: 15,
-                }}
-              >
-                <Image
+          {ClientTestimonialsData.map((data, index) => {
+            let fullStars = Math.floor(data.rating);
+            let hasHalfStar = data.rating % 1 !== 0;
+            let emptyStars = data.maxRating - fullStars - (hasHalfStar ? 1 : 0);
+            return (
+              <div className="embla__slide" key={index}>
+                <div
+                  className="testimonial-card p-4"
+                  style={{
+                    border: `2px solid ${colors.bannerbackgroundColor}`,
+                    borderRadius: 15,
+                  }}
+                >
+                  {/* <Image
                   width={100}
                   height={20}
                   src={data.starImage}
                   alt="rating stars"
                   priority={index === 0}
                   style={{ objectFit: "contain" }}
-                />
-                <div className="d-flex align-items-center gap-2 mt-2">
-                  <span className="level-8 fw-bold">{data.name}</span>
-                  <Image width={16} height={16} src={data.image} alt="verified" />
-                </div>
-                <div className="mt-2" style={{ color: "#666666" }}>
-                  {data.description}
-                </div>
-                <div className="mt-2" style={{ color: "#666666" }}>
-                 (Posted on {data.postedDate})
+                /> */}
+
+                  {/* Stars */}
+                  <div className="d-flex justify-content-between align-items-center gap-1 mb-1 flex-wrap">
+                    <div>
+                      {Array.from({ length: fullStars }).map((_, i) => (
+                        <span
+                          key={`full-${i}`}
+                          style={{
+                            color: "#FFC633",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+
+                      {hasHalfStar && (
+                        <span
+                          style={{
+                            position: "relative",
+                            display: "inline-block",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
+                          }}
+                        >
+                          <span style={{ color: "#E0E0E0" }}>★</span>
+                          <span
+                            style={{
+                              position: "absolute",
+                              left: 0,
+                              top: 0,
+                              width: "50%",
+                              overflow: "hidden",
+                              color: "#FFC633",
+                            }}
+                          >
+                            ★
+                          </span>
+                        </span>
+                      )}
+
+                      {Array.from({ length: emptyStars }).map((_, i) => (
+                        <span
+                          key={`empty-${i}`}
+                          style={{
+                            color: "#E0E0E0",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="d-flex align-items-center gap-2 mt-2">
+                    <span className="level-8 fw-bold">{data.name}</span>
+                    <Image
+                      width={16}
+                      height={16}
+                      src={data.image}
+                      alt="verified"
+                    />
+                  </div>
+
+                  <div className="mt-2" style={{ color: "#666666" }}>
+                    {data.description}
+                  </div>
+
+                  <div className="mt-2" style={{ color: "#666666" }}>
+                    (Posted on {data.postedDate})
+                  </div>
+
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="edge-blur edge-blur-left" />

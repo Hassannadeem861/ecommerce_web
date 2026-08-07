@@ -5,14 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Products = ({ products, heading }) => {
-    // console.log("products :", products.map((data) => data[1]));
 
-  // console.log("products : ",products)
   const [visibleCount, setVisibleCount] = useState(4);
-  // console.log("visibleCount :", visibleCount);
 
   const visibleProducts = products.slice(0, visibleCount);
-  // console.log("visibleProducts :", visibleProducts.map((data) => data.slug));
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 4);

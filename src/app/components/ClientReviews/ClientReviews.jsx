@@ -4,7 +4,6 @@ import HomeData from "@/app/utils/data";
 import React, { useState } from "react";
 import Image from "next/image";
 const ClientReviews = ({ clientReviews }) => {
-  // console.log("clientReviews: ", clientReviews)
   const ClientTestimonialsData = HomeData.ClientTestimonials.cards;
   const dropDownOptions = ["Latest", "Old"];
   const [selectedSort, setSelectedSort] = useState("Latest");
@@ -72,12 +71,8 @@ const ClientReviews = ({ clientReviews }) => {
         <div className="d-flex justify-content-center flex-wrap gap-3">
           {ClientTestimonialsData.map((data, index) => {
             let fullStars = Math.floor(data.rating);
-            // console.log("fullStars: ", fullStars);
             let hasHalfStar = data.rating % 1 !== 0;
-            // console.log("hasHalfStar: ", hasHalfStar);
-            let emptyStars =
-              data.maxRating - fullStars - (hasHalfStar ? 1 : 0);
-            // console.log("emptyStars: ", emptyStars);
+            let emptyStars = data.maxRating - fullStars - (hasHalfStar ? 1 : 0);
             return (
               <div key={index}>
                 <div
@@ -97,64 +92,72 @@ const ClientReviews = ({ clientReviews }) => {
                 /> */}
 
                   {/* Stars */}
-                  <div className="d-flex align-items-center gap-1 mb-1 flex-wrap">
-                    {Array.from({ length: fullStars }).map((_, i) => (
-                      <span
-                        key={`full-${i}`}
-                        style={{
-                          color: "#FFC633",
-                          fontSize: "clamp(20px, 4vw, 32px)",
-                          lineHeight: 1,
-                        }}
-                      >
-                        ★
-                      </span>
-                    ))}
-
-                    {hasHalfStar && (
-                      <span
-                        style={{
-                          position: "relative",
-                          display: "inline-block",
-                          fontSize: "clamp(20px, 4vw, 32px)",
-                          lineHeight: 1,
-                        }}
-                      >
-                        <span style={{ color: "#E0E0E0" }}>★</span>
+                  <div className="d-flex justify-content-between align-items-center gap-1 mb-1 flex-wrap">
+                    <div>
+                      {Array.from({ length: fullStars }).map((_, i) => (
                         <span
+                          key={`full-${i}`}
                           style={{
-                            position: "absolute",
-                            left: 0,
-                            top: 0,
-                            width: "50%",
-                            overflow: "hidden",
                             color: "#FFC633",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
                           }}
                         >
                           ★
                         </span>
-                      </span>
-                    )}
+                      ))}
 
-                    {Array.from({ length: emptyStars }).map((_, i) => (
-                      <span
-                        key={`empty-${i}`}
-                        style={{
-                          color: "#E0E0E0",
-                          fontSize: "clamp(20px, 4vw, 32px)",
-                          lineHeight: 1,
-                        }}
+                      {hasHalfStar && (
+                        <span
+                          style={{
+                            position: "relative",
+                            display: "inline-block",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
+                          }}
+                        >
+                          <span style={{ color: "#E0E0E0" }}>★</span>
+                          <span
+                            style={{
+                              position: "absolute",
+                              left: 0,
+                              top: 0,
+                              width: "50%",
+                              overflow: "hidden",
+                              color: "#FFC633",
+                            }}
+                          >
+                            ★
+                          </span>
+                        </span>
+                      )}
+
+                      {Array.from({ length: emptyStars }).map((_, i) => (
+                        <span
+                          key={`empty-${i}`}
+                          style={{
+                            color: "#E0E0E0",
+                            fontSize: "clamp(20px, 4vw, 32px)",
+                            lineHeight: 1,
+                          }}
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-three-dots"
+                        viewBox="0 0 16 16"
                       >
-                        ★
-                      </span>
-                    ))}
-
-                    {/* <span
-                    className="ms-2 text-muted"
-                    style={{ fontSize: "clamp(16px, 2.5vw, 25px)" }}
-                  >
-                    {clientReviews.rating}/{clientReviews.maxRating}
-                  </span> */}
+                        <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                      </svg>
+                    </div>
                   </div>
 
                   <div className="d-flex align-items-center gap-2 mt-2">
@@ -174,7 +177,6 @@ const ClientReviews = ({ clientReviews }) => {
                   <div className="mt-2" style={{ color: "#666666" }}>
                     (Posted on {data.postedDate})
                   </div>
-
                 </div>
               </div>
             );
@@ -183,12 +185,11 @@ const ClientReviews = ({ clientReviews }) => {
       </div>
 
       <style jsx>{`
-    
         .testimonial-card {
           width: 100%;
           height: 100%;
         }
-    
+
         @media (min-width: 768px) {
           .testimonial-card {
             width: 320px;
@@ -205,7 +206,6 @@ const ClientReviews = ({ clientReviews }) => {
           }
         }
       `}</style>
-
     </section>
   );
 };

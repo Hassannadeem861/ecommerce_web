@@ -5,7 +5,6 @@ import ProductTabs from "@/app/components/ProductTabs/ProductTabs.jsx";
 
 const ProductPage = async ({ params }) => {
   const { slug } = await params;
-//   console.log("slug: ", slug);
  const data = HomeData;
   const product = HomeData?.NewArrivalsProducts.find(
     (item) => item.slug === slug,
