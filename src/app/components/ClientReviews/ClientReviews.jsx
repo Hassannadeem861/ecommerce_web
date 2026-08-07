@@ -68,18 +68,18 @@ const ClientReviews = ({ clientReviews }) => {
         </div>
       </div>
 
-      <div className="mt-md-5">
-        <div className="d-flex flex-wrap gap-3">
+      <div className="mt-md-5 mt-3">
+        <div className="d-flex justify-content-center flex-wrap gap-3">
           {ClientTestimonialsData.map((data, index) => {
             let fullStars = Math.floor(data.rating);
-            console.log("fullStars: ", fullStars);
+            // console.log("fullStars: ", fullStars);
             let hasHalfStar = data.rating % 1 !== 0;
-            console.log("hasHalfStar: ", hasHalfStar);
+            // console.log("hasHalfStar: ", hasHalfStar);
             let emptyStars =
               data.maxRating - fullStars - (hasHalfStar ? 1 : 0);
-            console.log("emptyStars: ", emptyStars);
+            // console.log("emptyStars: ", emptyStars);
             return (
-              <div className="embla__slide" key={index}>
+              <div key={index}>
                 <div
                   className="testimonial-card p-4"
                   style={{
@@ -182,62 +182,12 @@ const ClientReviews = ({ clientReviews }) => {
       </div>
 
       <style jsx>{`
-        .heading-wrapper {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 24px;
-          margin-bottom: 1.5rem;
-        }
-        .arrow-group {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-        }
-        .arrow-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: none;
-          border: none;
-          font-size: 1.3rem;
-          line-height: 1;
-          cursor: pointer;
-          padding: 4px;
-        }
-        .embla {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-        }
-        .embla__container {
-          display: flex;
-          gap: 24px;
-        }
-        .embla__slide {
-          flex: 0 0 auto;
-          min-width: 0;
-        }
+    
         .testimonial-card {
           width: 260px;
           height: 100%;
         }
-        .edge-blur {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 40px;
-          pointer-events: none;
-          z-index: 2;
-          backdrop-filter: blur(4px);
-          -webkit-backdrop-filter: blur(4px);
-        }
-        .edge-blur-left {
-          left: 0;
-        }
-        .edge-blur-right {
-          right: 0;
-        }
+    
         @media (min-width: 768px) {
           .testimonial-card {
             width: 320px;
@@ -254,6 +204,7 @@ const ClientReviews = ({ clientReviews }) => {
           }
         }
       `}</style>
+
     </section>
   );
 };
