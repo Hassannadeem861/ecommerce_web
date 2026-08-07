@@ -4,20 +4,23 @@ import HomeData from "@/app/utils/data";
 
 const Faqs = () => {
   const faqsData = HomeData.FAQs;
-  const [openId, setOpenId] = useState(faqsData[0]?.id || null); // pehla FAQ default open
+  const [openId, setOpenId] = useState(faqsData[0]?.id || null);
 
   const toggleFaq = (id) => {
-    setOpenId((prev) => (prev === id ? null : id)); // same pe click = band ho jaye
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (
-    <section className="faqs-section">
+    <section className="mt-3 mt-md-5">
       <div className="faqs-wrapper">
         {faqsData.map((faq) => {
           const isOpen = openId === faq.id;
 
           return (
-            <div key={faq.id} className="faq-item">
+            <div
+              key={faq.id}
+              className={`faq-item ${isOpen ? "active" : ""}`}
+            >
               <button
                 type="button"
                 className="faq-question"
@@ -58,18 +61,22 @@ const Faqs = () => {
       </div>
 
       <style jsx>{`
-        .faqs-section {
-          padding: 24px 0;
-        }
         .faqs-wrapper {
-          max-width: 800px;
+          max-width: 1300px;
           margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
         }
         .faq-item {
-          border-bottom: 1px solid #e5e5e5;
+          border: 1px solid #e5e5e5;
+          border-radius: 14px;
+          overflow: hidden;
+          transition: border-color 0.25s ease, box-shadow 0.25s ease;
         }
-        .faq-item:first-child {
-          border-top: 1px solid #e5e5e5;
+        .faq-item.active {
+          border-color: #111111;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
         }
         .faq-question {
           width: 100%;
@@ -80,7 +87,7 @@ const Faqs = () => {
           background: none;
           border: none;
           text-align: left;
-          padding: 18px 4px;
+          padding: 16px 18px;
           cursor: pointer;
         }
         .faq-question-text {
@@ -112,7 +119,7 @@ const Faqs = () => {
         }
         .faq-answer {
           margin: 0;
-          padding: 0 4px 18px 4px;
+          padding: 0 18px 18px 18px;
           font-size: 14px;
           line-height: 1.6;
           color: #666666;
@@ -137,7 +144,10 @@ const Faqs = () => {
             font-size: 16px;
           }
           .faq-question {
-            padding: 22px 4px;
+            padding: 20px 22px;
+          }
+          .faq-answer {
+            padding: 0 22px 22px 22px;
           }
         }
       `}</style>
