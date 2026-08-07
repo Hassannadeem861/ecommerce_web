@@ -80,6 +80,9 @@ const Testimonials = ({ heading, ClientTestimonialsData }) => {
                 <div className="mt-2" style={{ color: "#666666" }}>
                   {data.description}
                 </div>
+                <div className="mt-2" style={{ color: "#666666" }}>
+                 (Posted on {data.postedDate})
+                </div>
               </div>
             </div>
           ))}

@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { Toaster } from "react-hot-toast";
 import BootstrapClient from "./components/BootstrapClient/BootstrapClient.jsx";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <BootstrapClient />
+        <Toaster position="top-center" />
         {/* <Toaster /> */}
         <Navbar />
         {children}

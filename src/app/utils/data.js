@@ -274,71 +274,101 @@ const HomeData = {
         name: "John J.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "Dow D.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 3.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "Alex K.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.6,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.9,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.7,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
       {
         name: "James L.",
         description:
           "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
-        starImage: "/assests/home/ClientTestimonials/stars.png",
+        // starImage: "/assests/home/ClientTestimonials/stars.png",
         image: "/assests/home/ClientTestimonials/greenTick.png",
+        rating: 4.5,
+        maxRating: 5,
+        postedDate: "8-Aug-2026"
       },
     ],
   },

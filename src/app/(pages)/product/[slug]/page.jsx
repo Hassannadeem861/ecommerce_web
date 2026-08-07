@@ -14,7 +14,7 @@ const ProductPage = async ({ params }) => {
   return (
     <div className="container">
       <ProductDetailInfo  product={product} />
-      <ProductTabs clientReviews={data.ClientReviews} faqs={data.FAQs}/>
+      <ProductTabs product={product} clientReviews={data.ClientTestimonials.cards} faqs={data.FAQs}/>
       <RelatedProducts heading={"YOU MIGHT ALSO LIKE"} product={HomeData?.NewArrivalsProducts} slug={slug}/>
     </div>
   );

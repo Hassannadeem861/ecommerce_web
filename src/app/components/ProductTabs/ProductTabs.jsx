@@ -4,7 +4,7 @@ import ClientReviews from "../ClientReviews/ClientReviews";
 import ProductFaqs from "../ProductFaqs/ProductFaqs";
 import colors from "@/app/utils/color";
 
-const ProductTabs = ({ clientReviews, faqs }) => {
+const ProductTabs = ({product, clientReviews, faqs }) => {
   const [activeTab, setActiveTab] = useState("reviews");
 
   const tab = [
@@ -48,7 +48,7 @@ const ProductTabs = ({ clientReviews, faqs }) => {
       </div>
 
       <div className="mt-md-3 mt-4">
-        {activeTab === "reviews" && <ClientReviews  clientReviews={clientReviews}/>}
+        {activeTab === "reviews" && <ClientReviews clientReviews={clientReviews}/>}
         {activeTab === "faqs" && <ProductFaqs />}
       </div>
     </section>
