@@ -67,6 +67,7 @@ const Faqs = () => {
           display: flex;
           flex-direction: column;
           gap: 12px;
+          
         }
         .faq-item {
           border: 1px solid #e5e5e5;
@@ -77,6 +78,7 @@ const Faqs = () => {
         .faq-item.active {
           border-color: #111111;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+          
         }
         .faq-question {
           width: 100%;
