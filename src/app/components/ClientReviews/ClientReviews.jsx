@@ -174,6 +174,7 @@ const ClientReviews = ({ clientReviews }) => {
                   <div className="mt-2" style={{ color: "#666666" }}>
                     (Posted on {data.postedDate})
                   </div>
+
                 </div>
               </div>
             );
@@ -184,7 +185,7 @@ const ClientReviews = ({ clientReviews }) => {
       <style jsx>{`
     
         .testimonial-card {
-          width: 260px;
+          width: 100%;
           height: 100%;
         }
     
